@@ -90,15 +90,6 @@ streamlit run mainapp.py
 
 ## 🖥️ Dashboard Preview
 
-### 📊 Sample Visuals
-| Dashboard Page | Description |
-|----------------|-------------|
-| ![Dashboard1](https://github.com/hetpatel1812/FitPulse-Health-Anomaly-Detection/blob/main/Fitpulse/assets/Upload%20data%20%26%20start%20analysis.png) | Upload data & start analysis |
-| ![Dashboard2](https://github.com/hetpatel1812/FitPulse-Health-Anomaly-Detection/blob/main/Fitpulse/assets/View%20anomaly%20detections.png) | View anomaly detections |
-| ![Dashboard3](https://github.com/hetpatel1812/FitPulse-Health-Anomaly-Detection/blob/main/Fitpulse/assets/Clustered%20behavior%20patterns.png) | Clustered behavior patterns |
-
----
-
 ## 📈 Results
 
 - Achieved **~94% accuracy** in anomaly detection.  
