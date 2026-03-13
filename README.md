@@ -1,5 +1,5 @@
 # 🩺 FitPulse – Health Anomaly Detection System
-
+  
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-brightgreen)
 ![Machine Learning](https://img.shields.io/badge/AI-Anomaly%20Detection-orange)
