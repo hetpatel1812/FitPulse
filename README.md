@@ -13,7 +13,7 @@
 
 The goal of FitPulse is to help users **understand their health data**, **identify anomalies early**, and **encourage proactive wellness management**.
 
----
+---  
 
 ## 🎯 Objectives
 
