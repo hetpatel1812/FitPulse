@@ -37,12 +37,23 @@ Built as part of my internship at Infosys Springboard (Sep–Nov 2025).
 
 ## ⚙️ How It Works
 ```
-Health Data (CSV) → Preprocessing → KMeans Clustering
-                                  → Prophet Forecasting
-                                  ↓
-                         Anomaly Detection
-                                  ↓
-                      Streamlit Dashboard + Risk Insights
+Health Data (CSV)
+        │
+        ▼
+  Preprocessing
+  (clean, validate, format)
+        │
+        ├──────────────────┐
+        ▼                  ▼
+  KMeans Clustering   Prophet Forecasting
+  (behavior groups)   (trend modeling)
+        │                  │
+        └────────┬─────────┘
+                 ▼
+        Anomaly Detection
+                 │
+                 ▼
+   Streamlit Dashboard + Risk Insights
 ```
 
 **KMeans Clustering**
