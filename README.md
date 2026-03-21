@@ -1,154 +1,133 @@
-# 🩺 FitPulse – Health Anomaly Detection System
-  
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+# 🩺 FitPulse — Health Anomaly Detection System
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![Streamlit](https://img.shields.io/badge/Framework-Streamlit-brightgreen)
-![Machine Learning](https://img.shields.io/badge/AI-Anomaly%20Detection-orange)
+![ML](https://img.shields.io/badge/AI-Anomaly%20Detection-orange)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
----
+A machine learning system that detects anomalies in health data using 
+KMeans clustering and Prophet time-series forecasting, with an 
+interactive Streamlit dashboard for visualization.
 
-## 📘 Overview
-
-**FitPulse** is a **machine-learning–based health anomaly detection system** designed to analyze data collected from fitness trackers such as heart rate, steps, and sleep duration. It uses **machine learning algorithms** to identify irregular health patterns and provides interactive **visual dashboards** to help users monitor daily trends.
-
-The goal of FitPulse is to help users **understand their health data**, **identify anomalies early**, and **encourage proactive wellness management**.
-
----  
-
-## 🎯 Objectives
-
-- Collect and preprocess health data from wearable fitness devices.  
-- Detect anomalies using **rule-based** and **machine learning** methods.  
-- Visualize user activity and health trends through interactive dashboards.  
-- Generate downloadable **reports (CSV/TXT)** with summarized insights.  
+Built as part of my internship at Infosys Springboard (Sep–Nov 2025).
 
 ---
 
-## ⚙️ System Architecture
+## 🎯 What It Does
 
-```
-User Upload → Data Preprocessing → Feature Extraction → ML Models (Isolation Forest + KMeans)
-             ↓
-        Visualization → Anomaly Detection Report
-```
-
-🧩 **Modules:**
-1. **Data Preprocessing** – Cleans, aligns, and validates timestamps.  
-2. **Feature Extraction** – Uses *TSFresh* to derive statistical features.  
-3. **ML Models** – Isolation Forest detects anomalies; KMeans groups user behavior.  
-4. **Visualization** – Streamlit dashboard for charts and insights.  
-5. **Report Generation** – Exports summarized results.
-
----
-
-## 🧠 Machine Learning Workflow
-
-**Algorithms Used:**
-- **Isolation Forest:** Detects irregular or rare data points.  
-- **KMeans Clustering:** Groups user activity into behavioral categories.  
-- **TSFresh:** Automatically extracts features from time-series data.  
-- **Prophet (Optional):** Models seasonality and future health trends.
+- Takes health data (heart rate, sleep duration, daily steps)
+- Runs KMeans clustering to group behavioral patterns
+- Uses Prophet to model time-series trends and flag deviations
+- Displays detected anomalies on an interactive Streamlit dashboard
+- Generates risk-level insights based on cluster behavior
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Component | Technology Used |
-|------------|----------------|
-| Language | Python 3.8+ |
-| Frontend | Streamlit |
-| Data Processing | Pandas, NumPy |
-| Visualization | Matplotlib, Plotly |
-| Machine Learning | Scikit-learn, TSFresh, Prophet |
-| Reporting | CSV/TXT Export |
+| Component        | Technology              |
+|------------------|-------------------------|
+| Language         | Python 3.8+             |
+| Dashboard        | Streamlit               |
+| ML Models        | Scikit-learn, Prophet   |
+| Data Processing  | Pandas, NumPy           |
+| Visualization    | Matplotlib, Plotly      |
 
 ---
 
-## 🚀 Installation & Setup
+## ⚙️ How It Works
+```
+Health Data (CSV) → Preprocessing → KMeans Clustering
+                                  → Prophet Forecasting
+                                  ↓
+                         Anomaly Detection
+                                  ↓
+                      Streamlit Dashboard + Risk Insights
+```
 
-### 1️⃣ Clone the Repository
+**KMeans Clustering**
+Groups heart rate, sleep, and activity readings into behavioral 
+clusters. Points that fall outside expected cluster boundaries 
+are flagged as anomalies.
+
+**Prophet Forecasting**
+Models the expected trend of each health metric over time. 
+Significant deviations from the predicted trend are flagged 
+for review.
+
+---
+
+## 🚀 Setup & Installation
+
+### 1. Clone the repository
 ```bash
 git clone https://github.com/hetpatel1812/FitPulse-Health-Anomaly-Detection.git
 cd FitPulse
 ```
 
-### 2️⃣ Install Dependencies
+### 2. Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3️⃣ Run the Application
+### 3. Run the app
 ```bash
 streamlit run mainapp.py
 ```
 
-### 4️⃣ Upload Fitness Data
-- Upload your **CSV/JSON** file containing heart rate, steps, and sleep data.  
-- The system automatically cleans, analyzes, and displays insights.
+### 4. Upload your data
+
+Upload a CSV file with columns: `heart_rate`, `steps`, `sleep_duration`, `date`
+
+The dashboard will automatically process and display results.
 
 ---
 
-## 🖥️ Dashboard Preview
-
-## 📈 Results
-
-- Achieved **~94% accuracy** in anomaly detection.  
-- Efficient processing for datasets with **10,000+ records**.  
-- Dynamic Streamlit dashboard with real-time visuals and exportable reports.
-
----
-
-## 🔮 Future Enhancements
-
-- Integration with **Fitbit, Apple Health, and Google Fit APIs**.  
-- Real-time **anomaly alerts** and personalized AI recommendations.  
-- **Cloud-based** multi-user access and data sync.  
-- Advanced forecasting using **LSTM networks**.
-
----
-
-## 🧩 Folder Structure
-
+## 📁 Project Structure
 ```
 FitPulse/
-│
-├── mainapp.py                # Streamlit app main file
-├── requirements.txt          # Dependencies
-├── data/                     # Sample data files (CSV/JSON)
-├── assets/                   # Images, diagrams, and snapshots
-├── License
-└── README.md                 # Project documentation
+├── mainapp.py           # Streamlit dashboard entry point
+├── requirements.txt     # Python dependencies
+├── data/                # Sample health data (CSV)
+├── assets/              # Screenshots and diagrams
+├── LICENSE
+└── README.md
 ```
 
 ---
 
-## 👨‍💻 Developer Information
+## 🖥️ Dashboard Features
 
-**Name:** Het Patel  
-**Project:** FitPulse – Health Anomaly Detection System  
-**Role:** Developer 
-**GitHub:** [https://github.com/hetpatel1812](https://github.com/hetpatel1812)  
+- Upload CSV health data
+- View clustering results across heart rate, sleep, activity
+- See flagged anomaly points highlighted on charts
+- Download risk insight summary report
+
+---
+
+## 🔮 Planned Improvements
+
+- Add LSTM-based deep learning forecasting
+- Connect to real wearable device APIs
+- Add real-time alert notifications
+
+---
+
+## 👨‍💻 Developer
+
+**Het Patel**
+- GitHub: [hetpatel1812](https://github.com/hetpatel1812)
+- LinkedIn: [het-patel-94b334284](https://www.linkedin.com/in/het-patel-94b334284)
+- Email: hetpce2005@gmail.com
 
 ---
 
 ## 📜 License
 
-This project is licensed under the **MIT License** — you are free to use, modify, and distribute with attribution.
-
----
-
-## Acknowledgment
-
-Special thanks to open-source contributors and libraries including:  
-**Streamlit, Scikit-learn, Pandas, NumPy, TSFresh, and Facebook Prophet.**
+MIT License — free to use with attribution.
 
 ---
 
 ## 💬 Feedback
 
-If you find this project helpful or have suggestions for improvement, feel free to fork the repo or open an issue.  
-⭐ Don’t forget to star this repository if you like it!
-
----
-
-> “Transforming raw fitness data into meaningful health insights — powered by AI.”
+If you find this useful, feel free to star the repo or open an issue.
