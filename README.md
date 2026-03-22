@@ -124,15 +124,6 @@ FitPulse/
 
 ---
 
-## 👨‍💻 Developer
-
-**Het Patel**
-- GitHub: [hetpatel1812](https://github.com/hetpatel1812)
-- LinkedIn: [het-patel-94b334284](https://www.linkedin.com/in/het-patel-94b334284)
-- Email: hetpce2005@gmail.com
-
----
-
 ## 📜 License
 
 MIT License — free to use with attribution.
