@@ -100,7 +100,6 @@ FitPulse/
 ├── mainapp.py           # Streamlit dashboard entry point
 ├── requirements.txt     # Python dependencies
 ├── data/                # Sample health data (CSV)
-├── assets/              # Screenshots and diagrams
 ├── LICENSE
 └── README.md
 ```
