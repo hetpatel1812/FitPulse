@@ -11,7 +11,7 @@ interactive Streamlit dashboard for visualization.
 
 Built as part of my internship at Infosys Springboard (Sep–Nov 2025).
 
----
+--- 
 
 ## 🎯 What It Does
 
